@@ -1,0 +1,11 @@
+import React from "react";
+import { View, Text } from "react-native";
+
+export default function RequestScreen() {
+  return (
+    <View style={{ padding: 20 }}>
+      <Text style={{ fontSize: 20, fontWeight: "600" }}>Request Submitted!</Text>
+      <Text>Your food pickup request has been sent.</Text>
+    </View>
+  );
+}
