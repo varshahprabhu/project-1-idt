@@ -1,0 +1,23 @@
+import React from "react";
+import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+
+export default function FoodCard({ item, onPress }) {
+  return (
+    <TouchableOpacity style={styles.card} onPress={onPress}>
+      <Text style={styles.title}>{item[0]}</Text>
+      <Text>Quantity: {item[1]}</Text>
+      <Text>Location: {item[2]}</Text>
+      <Text>Expires: {item[3]}</Text>
+    </TouchableOpacity>
+  );
+}
+
+const styles = StyleSheet.create({
+  card: {
+    padding: 15,
+    borderRadius: 10,
+    backgroundColor: "#efefef",
+    marginBottom: 12
+  },
+  title: { fontSize: 18, fontWeight: "700" }
+});
