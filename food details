@@ -1,0 +1,18 @@
+import React from "react";
+import { View, Text, Button } from "react-native";
+
+export default function FoodDetails({ route, navigation }) {
+  const { item } = route.params;
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Text style={{ fontSize: 22, fontWeight: "bold" }}>{item[0]}</Text>
+      <Text>Quantity: {item[1]}</Text>
+      <Text>Location: {item[2]}</Text>
+      <Text>Expires: {item[3]}</Text>
+
+      <Button title="Request Pickup" onPress={() => navigation.navigate("Request")} />
+      <Button title="View on Map" onPress={() => navigation.navigate("Map")} />
+    </View>
+  );
+}
